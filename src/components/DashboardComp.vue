@@ -1,14 +1,20 @@
 <template>
   <div class='hello'>
-    <h1>{{ msg }}</h1>
+    <h1>{{ welcome }}</h1>
+    <hr/>
+    <h2>{{ msg }}</h2>
+    <em>{{ techUsed }}</em>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Dashboard',
   props: {
+    welcome: String,
     msg: String,
+    techUsed: String,
+    message: new Date().toLocaleString(),
   },
 };
 </script>
@@ -18,15 +24,8 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.description{
+  text-align: center;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
