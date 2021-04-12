@@ -8,13 +8,13 @@
 </template>
 
 <script>
+
 export default {
   name: 'Dashboard',
   props: {
     welcome: String,
     msg: String,
     techUsed: String,
-    message: new Date().toLocaleString(),
   },
 };
 </script>

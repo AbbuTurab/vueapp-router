@@ -1,4 +1,6 @@
 <template>
+<div>
+    <Header text='Please fill form to get more Info'/>
   <div class='container'>
   <form>
       <div class="form-inner">
@@ -22,11 +24,26 @@
           <label>Additional Details:</label>
           <textarea />
         </div>
-        <input class="btn" type="submit" value="Submit" />
+      <input v-on:click="clicked('You have submitted contact form')"
+      class="btn" type="submit" value="Submit" />
       </div>
     </form>
     </div>
+    </div>
 </template>
+
+<script>
+import Header from '@/components/Header.vue';
+import exampleMixin from '../Mixins/Mymixin';
+
+export default {
+  mixins: [exampleMixin],
+  name: 'Contactus',
+  components: {
+    Header,
+  },
+};
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
