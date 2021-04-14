@@ -25,7 +25,7 @@ import Dashboard from '@/components/DashboardComp.vue';
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'Home',
+  name: 'MyDashboard',
   components: {
     Dashboard,
     Header,

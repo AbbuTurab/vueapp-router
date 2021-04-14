@@ -18,6 +18,7 @@ export default {
   },
   watch: {
     name(cName, pName) {
+      // eslint-disable-next-line no-console
       console.log(cName, pName);
       this.updatedName = `Mr. ${cName.toUpperCase()}`;
     },

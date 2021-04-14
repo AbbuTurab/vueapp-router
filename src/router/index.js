@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+// import Myservice from '../components/Myservice.vue';
+import MyDashboard from '../views/Dashboard.vue';
 
 Vue.use(VueRouter);
 
@@ -21,10 +23,13 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
+    component: MyDashboard,
+    // children: [
+    //   { path: 'services', name: 'Newservice', component: Myservice },
+    // ],
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue'),
   },
   {
     path: '/users',
@@ -41,6 +46,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Contactus.vue'),
+  },
+  {
+    path: '/posts',
+    name: 'Requests',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../components/Requests.vue'),
   },
 ];
 

@@ -29,6 +29,7 @@
 import exampleMixin from '../Mixins/Mymixin';
 
 export default {
+  name: 'User',
   Notes: '',
   mixins: [exampleMixin],
   computed: {
